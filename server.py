@@ -25,11 +25,11 @@ def index():
     for clown in [clown1, clown2]:
         # extract alpha channel
         a_channel = clown.getchannel("A")
-        # reduce values by half
+        # reduce alpha values
         a_channel = a_channel.point(lambda x: x * 0.66)
         clown.putalpha(a_channel)
 
-    # paste clown somewhere on the original image
+    # paste clowns somewhere on the original image
     for _ in range(random.randint(1, 5)):
         for clown in [clown1, clown2]:
             img.paste(
