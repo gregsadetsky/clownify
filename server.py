@@ -30,7 +30,7 @@ def index():
         clown.putalpha(a_channel)
 
     # paste clown somewhere on the original image
-    for _ in range(random.randint(1, 5)):
+    for _ in range(random.randint(1, 500)):
         for clown in [clown1, clown2]:
             img.paste(
                 clown,
